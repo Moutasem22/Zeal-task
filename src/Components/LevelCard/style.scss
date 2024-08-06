@@ -1,0 +1,36 @@
+.level-cards-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+  column-gap: 10px;
+
+  .main-btn {
+    border: 1px solid #f6f6f6;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    flex-basis: 31%;
+    height: 40px;
+    font-size: 18px;
+
+    &:hover,
+    &.active {
+      border-color: transparent;
+      // box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 9px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    &.easy-btn {
+      background-color: #99ce2a;
+    }
+
+    &.medium-btn {
+      background-color: #fbbc05;
+    }
+
+    &.hard-btn {
+      background-color: #ea4335;
+    }
+  }
+}

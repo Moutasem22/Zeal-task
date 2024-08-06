@@ -1,0 +1,54 @@
+.side-modal {
+  border: 1px solid #7d7d7d;
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 10px 32px;
+
+  .modal-header {
+    height: 60px;
+    display: flex;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid;
+    align-items: center;
+
+    > p {
+      font-weight: 500;
+      font-size: 20px;
+      text-align: center;
+      color: #a19c9c;
+      line-height: 30px;
+      width: 100%;
+      margin: 0;
+      transition: all 0.4s ease;
+    }
+  }
+
+  .side-modal-levels {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-size: 20px;
+      display: block;
+      margin-bottom: 10px;
+      cursor: pointer;
+
+      &.active {
+        font-weight: 500;
+      }
+
+      &.easy {
+        color: #99ce2a;
+      }
+
+      &.medium {
+        color: #fbbc05;
+      }
+
+      &.hard {
+        color: #ea4335;
+      }
+    }
+  }
+}

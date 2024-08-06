@@ -1,0 +1,23 @@
+.main-btn {
+  min-width: 100px;
+  height: 32px;
+  border: unset;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+
+  &.primary {
+    background-color: #2251b4;
+  }
+
+  &.default {
+    background-color: #fff;
+  }
+
+  &.secondary {
+    background-color: var(--secondary-color);
+  }
+}

@@ -1,0 +1,118 @@
+.categories-list {
+  display: flex;
+  align-items: center;
+  column-gap: 3%;
+  flex-wrap: wrap;
+  padding: 0;
+  max-height: calc(100vh - 95px);
+  overflow: auto;
+
+  .category-card-container {
+    flex-basis: 22%;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    position: relative;
+
+    .category-card {
+      background: #fff;
+      width: 100%;
+      height: 101px;
+      flex-shrink: 0;
+      display: flex;
+      border-radius: 6px 6px 0 0;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      border: 1px solid transparent;
+      padding: 0 10px;
+
+      p {
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+        color: #a19c9c;
+        line-height: 30px;
+        width: 100%;
+        margin: 0;
+        transition: all 0.4s ease;
+      }
+
+      &:hover,
+      &.active {
+        background-color: #2251b4;
+        border-color: #2251b4;
+
+        p {
+          color: #fff;
+        }
+      }
+    }
+
+    .card-action {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      background: #2251b4;
+      border-radius: 0 0 6px 6px;
+      font-weight: 400;
+      font-size: 20px;
+      text-align: center;
+      color: #fff;
+      line-height: 30px;
+      width: 100%;
+      margin: 0;
+      transition: all 0.4s ease;
+    }
+
+    &.active,
+    &:hover {
+      border-color: #2251b4;
+      .card-action {
+        background: #fff;
+        color: #2251b4;
+      }
+    }
+
+    &.disabled {
+      pointer-events: none;
+
+      .category-card {
+        position: relative;
+
+        &::after {
+          inset: 0;
+          content: "Played";
+          color: red;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          background: rgba(255, 255, 255, 0.7);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  margin-bottom: 15px;
+  padding-right: 30px;
+}
+
+.cat-loading {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
